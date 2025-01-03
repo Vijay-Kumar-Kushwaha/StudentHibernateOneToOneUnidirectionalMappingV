@@ -26,7 +26,7 @@ public class Main {
         session.getTransaction().commit();
         System.out.println("Data deleted successfully.");
         
-        
+        //UPDATE THE DATA OF THE TABLE
 //      Student s = session.get(Student.class,102);
 //		s.getStudentDetails().setArea("MG ROADDDD");
 //		
