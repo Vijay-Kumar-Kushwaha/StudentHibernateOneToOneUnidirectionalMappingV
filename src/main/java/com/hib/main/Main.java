@@ -14,11 +14,11 @@ public class Main {
 				addAnnotatedClass(Student.class).
 				addAnnotatedClass(StudentDetails.class).
 				buildSessionFactory().
-				openSession();
+				openSession(); 
 		
+   
 
-
-		//TO DELETE A RECORD FROM THE TABLE
+		//TO DELETE RECORD FROM THE TABLE
 		Student s = session.get(Student.class, 2);
         session.beginTransaction();
 
