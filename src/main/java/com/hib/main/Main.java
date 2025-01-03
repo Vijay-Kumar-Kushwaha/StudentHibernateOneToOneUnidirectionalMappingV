@@ -16,31 +16,29 @@ public class Main {
 				buildSessionFactory().
 				openSession();
 		
-		
-		Student s = session.get(Student.class,102);
-		s.getStudentDetails().setArea("MG Road");
-		
-		session.beginTransaction();
-		session.persist(s);
-		session.getTransaction().commit();
-		
-		System.out.println("Data set");
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+		//TO DELETE A RECORD FROM THE TABLE
+		Student s = session.get(Student.class, 2);
+        session.beginTransaction();
+
+        session.delete(s);
+        session.getTransaction().commit();
+        System.out.println("Data deleted successfully.");
+        
+        
+//      Student s = session.get(Student.class,102);
+//		s.getStudentDetails().setArea("MG ROADDDD");
+//		
+//		session.beginTransaction();
+//		session.persist(s);
+//		session.getTransaction().commit();
+//	 	
+//		System.out.println("Data Upated");
 		
 		
 		
-		
+		//IT IS FETCHING DATA BY USING PRIMARY KEY
 		
 //		Student s = session.get(Student.class,102);
 //		
@@ -61,7 +59,7 @@ public class Main {
 		
 		
 		
-		
+		//INSERT INTO TO THE TABLE... HERE IT WILL INSERT BY DOING MAPPING TO THE STUDENT_DETAILS TABLE
 		
 //		Student s1 = new Student("Hari","hari@gmail.com",765231);
 //		StudentDetails sd = new StudentDetails("BTM", "Bangalore",560076);
